@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Social Media App</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+<script>
+
+function goHome(){
+
+   window.location.href = "index.html";
+}
+
+function goProfile(){
+
+   window.location.href = "profile.html";
+}
+
+function goMessages(){
+
+   window.location.href = "message.html";
+}
+
+function goReels(){
+
+   window.location.href = "reels.html";
+}
+
+</script>
+<body>
+
+<div class="container">
+
+    <div class="sidebar">
+
+        <h2>SocialApp</h2>
+
+        <ul>
+
+   <li onclick="goHome()">
+      🏠 Home
+   </li>
+
+   <li onclick="goProfile()">
+      👤 Profile
+   </li>
+
+   <li onclick="goMessages()">
+      💬 Messages
+   </li>
+
+   <li onclick="goReels()">
+      🎥 Reels
+   </li>
+
+</ul>
+
+    </div>
+
+    <div class="main-content">
+
+        <div class="navbar">
+
+            <h2>Home Feed</h2>
+
+        </div>
+
+        <div class="create-post">
+
+            <textarea
+                id="caption"
+                placeholder="What's on your mind?"
+            ></textarea>
+
+            <input
+                type="text"
+                id="image"
+                placeholder="Paste image URL"
+            >
+
+            <button onclick="createPost()">
+                Create Post
+            </button>
+
+        </div>
+
+        <div id="postsContainer"></div>
+
+    </div>
+
+</div>
+
+<script src="js/feed.js"></script>
+
+</body>
+</html>
